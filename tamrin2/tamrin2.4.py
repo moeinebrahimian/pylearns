@@ -1,0 +1,5 @@
+hour=int(input("enter the huor:"))
+minuot=int(input("enter the minuot:"))
+second=int(input("enter the second"))
+x=(hour*60**2)+(minuot*60)+(second)
+print("the second is:",x)
