@@ -2,17 +2,19 @@ import random
 import time
 from colorama import Fore
 
+
 def check(game):
    for i in range(3):
-      if a[i][0]==a[i][1] and a[i][2]==a[i][1]:
+      if a[i][0]==a[i][1]==a[i][1]:
          win=a[i][0]
-      elif a[0][i]==a[1][i]==a[2][i]==b:
+      elif a[0][i]==a[1][i]==a[2][i]:
          win=a[0][i]
-   if a[0][0]==b and a[1][1]==b and a[2][2]==b:
+   if a[0][0]==a[1][1]==a[2][2]:
       win=a[0][0]
-   if a[0][2]==b and a[1][1]==b and a[2][0]==b:
+   if a[0][2]== a[1][1] ==a[2][0]:
       win=a[0][2]    
    return win
+
 
 def board():
    for i in range(3):
@@ -20,15 +22,16 @@ def board():
          print(a[i][j],end="")
       print()
 
+
 start_time = time.time()
-end_time = time.time()
+
 a = [["-","-","-"],
    ["-","-","-"],
    ["-","-","-"]]
 
+win = ''
 b="x"
 c="o"
-win = ''
 
 board()
 player=input("pc or player  ? :")
@@ -50,10 +53,10 @@ while True:
 
 
    win = check(a)   
-   if win==b :
+   if win==Fore.RED+b :
       print("player x win")
       break
-   elif win==c:
+   elif win==Fore.BLUE+c:
       print("player o win")
       break
    while True:
@@ -80,12 +83,12 @@ while True:
    board()
     
    win = check(a)   
-   if win == b :
+   if win ==Fore.RED+b :
       print("player x win")
       break
-   elif win == c:
+   elif win == Fore.BLUE+c:
       print("player o win")
       break
 
-elapsed_time = end_time - start_time
+elapsed_time = time.time()- start_time
 print("Elapsed time: ", elapsed_time) 
