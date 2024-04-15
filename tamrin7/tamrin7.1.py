@@ -129,15 +129,16 @@ def buy():
         print("not found ")
 
 
-def qrcode():
+def creat_qrcode():
     qr_inp=input("enter the code:") 
     for product in PRODUCTS:
         if qr_inp == product['code']:
             qr = (product['code'],product['name'],product['price'], product['count'])
             qr_m = qrcode.make(qr)
+           
             qr_m.save("qrcode.png")
-
-
+    else:
+        print("not found")
 print("welcome to my store")
 print("loading....")
 read_from_database()
@@ -161,7 +162,7 @@ while True:
     elif choice == 6:
         buy()  
     elif choice == 7:
-        qrcode()
+        creat_qrcode()
     elif choice == 8:
         result_price=0
         for item in list_buy:
