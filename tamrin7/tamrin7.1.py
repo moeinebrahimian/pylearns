@@ -39,7 +39,8 @@ def show_menu():
     print("4- Search")
     print("5- Show list")
     print("6- buy")
-    print("7- exit")
+    print("7- qrcode")
+    print("8- exit")
    
 
 def add():
