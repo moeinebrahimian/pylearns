@@ -1,5 +1,4 @@
 
-from termcolor2 import colored
 from gtts import gTTS
 from os import path
 
@@ -15,7 +14,7 @@ def read_from_file():
 
         f.close()
     else:
-        print(colored("file not found",color="red"))
+        print("not found")
 
 
 
@@ -38,7 +37,7 @@ def translate_english_to_persian():
         else:
             output=output+word+" "
     
-    print(colored(output,color="green"))
+    print(output)
 
     voice=gTTS(output,lang="en")
     voice.save("tamrin8/Voice.mp3")
@@ -56,7 +55,7 @@ def translate_persian_to_english():
         else:
             output=output+word+" "
     
-    print(colored(output,color="green"))
+    print(output)
 
     voice=gTTS(output,lang="en")
     voice.save("tamrin8/Voice.mp3")
