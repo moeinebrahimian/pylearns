@@ -9,3 +9,4 @@ And when you are done, you have a sound of the translated sentence or word.
 #### Notice:
 If you want to use it, first download the (imageio) library and , change the location of your images.for download imageio open cmd and type (pip install imageio)
 ### The work of this gif maker: its so easy put your image in vscode and then Do what is said above
+and i used picsart for screen shots  so dont thing I cheated in practice 😂
