@@ -2,12 +2,11 @@
 from gtts import gTTS
 from os import path
 
+words_bank=[]
 def read_from_file():
     if path.exists("tamrin8/translate.txt"):
-        global words_bank
         f=open("tamrin8/translate.txt","r")
         temp=f.read().split("\n")
-        words_bank=[]
         for i in range(0,len(temp),2):
             my_dict={"en":temp[i],"fa":temp[i+1]}
             words_bank.append(my_dict)
@@ -19,9 +18,9 @@ def read_from_file():
 
 
 def show_menu():
-    print("1---> translate english to persian")
-    print("2---> translate persian to english")
-    print("3---> add a new word to database")
+    print("1--->  english to persian")
+    print("2--->  persian to english")
+    print("3---> add a new word")
     print("4---> exit")
 
 
@@ -73,7 +72,7 @@ def add_a_new_word_to_database():
     f.write("\n")
     f.write(persian)
     f.close()
-
+    print("your word is successfully added")
 
 
 
@@ -89,4 +88,5 @@ while True:
     elif choice == 3:
         add_a_new_word_to_database()
     elif choice == 4:
-        exit(0)
+        print("thank you for using my translate ")
+        break
